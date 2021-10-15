@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/png" href="ball.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Kulki</title>
+</head>
+<body>
+    <div id="gray"></div>
+    <div id="restart">
+        <h4>KONIEC GRY</h4>
+        <div class='bestScore'></div>
+        <h1 id='allPoints'></h1>
+        <div class="button" id='restartButton'>Nowa gra</div>
+    </div>
+    <div id="container">
+        <div id="panel">
+            <div class="box">
+                <div class="button">Nowa gra</div>
+            </div>
+            <div class="box">
+                <div id='bestScoreTitle'>BEST SCORE</div>
+                <div class="bestScore" style='font-weight: bolder;'></div>
+            </div>
+            <div class="box">
+                <div id="nextBalls">
+                    <div class="nextBall" id="nextBall0"></div>
+                    <div class="nextBall" id="nextBall1"></div>
+                    <div class="nextBall" id="nextBall2"></div>
+                </div>
+                <div id="points">0</div>
+            </div>
+        </div>
+        <div id="board">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

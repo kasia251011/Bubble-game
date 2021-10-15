@@ -1,0 +1,161 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#container{
+    margin: 10px;
+    width: 504px;
+    height: 500px;
+}
+
+#panel{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+
+.box:nth-child(2){
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box:nth-child(3){
+    justify-content: flex-end;
+}
+
+#bestScoreTitle{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#nextBalls{
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    margin-right: 20px;
+}
+
+#pointsCells, #points{
+    text-align: center;
+}
+
+#pointsCell{
+    padding-right: 10px;
+}
+
+.nextBall{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: rgb(243, 213, 243);
+}
+
+.button{
+    margin-left: 5px;
+    padding: 10px;
+}
+
+.button:hover{
+    cursor: pointer;
+    
+}
+
+#board{
+    margin-top: 5px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes pathDisappear {
+    from {background-color: rgb(243, 213, 243);}
+    to {background-color: transparent;}
+}
+
+.cell{
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: none;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ballAppear {
+    from {width: 0px; height: 0px;}
+    to {width: 40px; height: 40px;}
+}
+
+@keyframes ballDisappear {
+    from {width: 40px; height: 40px;}
+    to {width: 0px; height: 0px;}
+}
+
+
+.ball{
+    border-radius: 50%;
+    animation: ballAppear;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+}
+
+.ball:hover{
+    cursor: pointer;
+}
+
+#restart{
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: auto;
+    top: 80px;
+    z-index: 1;
+    width: 400px;
+    height: 250px;
+    box-shadow:  4px -2px 24px -2px rgba(0,0,0,0.75);
+    background-color: rgb(243, 213, 243);
+}
+
+#gray{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(138, 138, 138, 0.486);
+}
+
+#restartButton{
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 25px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#restartButton:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
